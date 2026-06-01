@@ -58,6 +58,7 @@ public class PtpConfigScreen extends Screen {
         list.addButton(SettingsManager.TOGGLE_BOW);
         list.addButton(SettingsManager.TOGGLE_CROSSBOW);
         list.addButton(SettingsManager.TOGGLE_TRIDENT);
+        list.addButton(SettingsManager.TOGGLE_AXE);
         list.addButton(SettingsManager.TOGGLE_ENDERPEARL);
         list.addButton(SettingsManager.TOGGLE_SNOWBALL);
         list.addButton(SettingsManager.TOGGLE_EGG);
