@@ -6,6 +6,9 @@ import java.util.List;
 import fr.madu59.ptp.ProjectileInfo;
 import fr.madu59.ptp.config.SettingsManager;
 
+import me.pajic.rearm.enchantment.ReArmEnchantments;
+import me.pajic.rearm.ability.CripplingThrowAbility;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.Holder;
 import net.minecraft.core.component.DataComponents;
@@ -142,6 +145,17 @@ public class ProjectileInfo {
             Vec3 offset = new Vec3(0.2, 0.1, 0.2);
 
             if(useTicks >= TridentItem.THROW_THRESHOLD_TIME && !hasEnchantment(itemStack, Enchantments.RIPTIDE)) projectileInfoList.add(new ProjectileInfo(gravity, drag, vel, offset, position, false, waterDrag, ORDER_MDG, bypassAntiCheat));
+
+        }else if (item instanceof AxeItem && SettingsManager.TOGGLE_AXE.getValue()) {
+
+            waterDrag = 0.99;
+
+            int useTicks = player.getTicksUsingItem();
+
+            Vec3 vel = player.getViewVector(tickProgress).scale(TridentItem.PROJECTILE_SHOOT_POWER);
+            Vec3 offset = new Vec3(0.2, 0.1, 0.2);
+
+            if(useTicks >= TridentItem.THROW_THRESHOLD_TIME && hasEnchantment(itemStack, ReArmEnchantments.CRIPPLING_THROW)) projectileInfoList.add(new ProjectileInfo(gravity, drag, vel, offset, position, false, waterDrag, ORDER_MDG, bypassAntiCheat));
             
         } else if ((item instanceof SnowballItem && SettingsManager.TOGGLE_SNOWBALL.getValue()) || (item instanceof EggItem && SettingsManager.TOGGLE_EGG.getValue()) || (item instanceof EnderpearlItem && SettingsManager.TOGGLE_ENDERPEARL.getValue())) {
 
