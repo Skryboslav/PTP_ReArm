@@ -122,8 +122,15 @@ public class SettingsManager {
 
     public static Option<Boolean> TOGGLE_TRIDENT = loadOptionWithDefaults(
         "TOGGLE_TRIDENT",
-        "item.minecraft.trident",
+        "ptp.config.toggle_axe_title",
         "ptp.config.toggle_trident_desc",
+        true
+    );
+
+    public static Option<Boolean> TOGGLE_AXE = loadOptionWithDefaults(
+        "TOGGLE_AXE",
+        "item.minecraft.axe",
+        "ptp.config.toggle_axe_desc",
         true
     );
 
