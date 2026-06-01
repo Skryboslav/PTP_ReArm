@@ -30,6 +30,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.SnowballItem;
 import net.minecraft.world.item.ThrowablePotionItem;
 import net.minecraft.world.item.TridentItem;
+import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.WindChargeItem;
 import net.minecraft.world.item.component.ChargedProjectiles;
 import net.minecraft.world.item.enchantment.Enchantment;
