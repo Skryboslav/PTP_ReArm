@@ -15,6 +15,10 @@ repositories {
     	name = "Terraformers"
     	url = "https://maven.terraformersmc.com/releases/"
   	}
+	maven {
+		name = "Cursemaven"
+		url = "https://cursemaven.com"
+	}
 }
 
 loom {
@@ -37,6 +41,10 @@ dependencies {
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 	compileOnly("com.terraformersmc:modmenu:${project.modmenu_version}")
+	
+	// Rearm, currently not necessary
+	compileOnly("curse.maven:rearm-1130102:8024187")
+	runtimeOnly("curse.maven:rearm-1130102:8024187")
 }
 
 processResources {
